@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<!--
+	04/18 新增T1測試頁面
+-->
+<html>
+	<head>
+		<title><%= data[0].戰隊 %></title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="http://localhost:3000/my/<%=data[0].area%>" class="title">回到<%=data[0].area%></a>
+				<nav>
+					<ul>
+						<li><a href="http://localhost:3000/my/LCK" >LCK</a></li>
+						<li><a href="http://localhost:3000/my/LPL" >LPL</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major"><%= data[0].戰隊 %></h1>
+
+							<!-- howard -->
+
+							<!--戰隊介紹-->
+								<section>
+									<div class="box alt">
+										<div class="row gtr-uniform">
+											<p><span class="image left"><img src="<%= data[0].logo %>" alt="" /></span>
+											</p>
+										</div>
+									</div>
+								</section>
+
+							<!--戰隊成員-->
+								<section>
+									<h1>現役成員</h1>
+									<div class="box alt">
+										<div class="row gtr-uniform">
+											<% for(let i=0; i<data.length;i++) { %>
+												<div class="col-4"><span class="image fit"><img src="<%=data[i].photo%>" alt="" /><%= data[i].ID %> </span></div>
+											<% } %>
+										</div>
+									</div>
+								</section>
+
+							<!--戰隊數據-->
+								<section>
+									<h1>近期對戰</h1>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>ID</th>
+													<th>真實性名</th>
+													<th>位置</th>
+													<th>Main角</th>
+												</tr>
+											</thead>
+											<tbody>
+												<% for(let i=0; i<data.length;i++) { %>
+													<tr>
+														<td><%=data[i].ID%></td>
+														<td><%=data[i].real_name%></td>
+														<td><%=data[i].position%></td>
+														<td><%=data[i].main%></td>
+													</tr>
+													<%}%>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2"></td>
+													<td></td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+								</section>
+
+							<!-- Lists -->
+								<section>
+									<div class="row">
+										<div class="col-6 col-12-medium">
+											<ul class="icons">
+												<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+												<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+												<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+												<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+											</ul>
+										</div>
+									</div>
+								</section>
+
+								<!---->
+
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP by Howard and Kan</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/jquery.scrollex.min.js"></script>
+			<script src="/assets/js/jquery.scrolly.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+	</body>
+</html>

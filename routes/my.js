@@ -21,7 +21,7 @@ router.get('/allplayer/:clan', lol_controller.getClanNumber);
 
 // CREATE
 router.post('/create', lol_controller.createPlayer);
-
+router.post('/create2', lol_controller.createPlayer2);
 //update
 router.post('/update', lol_controller.updatePlayer);
 

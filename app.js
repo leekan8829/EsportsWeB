@@ -22,6 +22,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+//html post
+app.use(express.urlencoded({ extended: true }))
+
+
+
 app.use('/', indexRouter);
 //Kan and Howard
 app.use('/my', myRouter);

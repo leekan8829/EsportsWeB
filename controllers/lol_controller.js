@@ -34,6 +34,18 @@ exports.createPlayer = async (req, res) => {
   }
 };
 
+//creat by html post
+exports.createPlayer2 = async (req, res) => {
+  console.log('createPlayer2', req.body);
+  try {
+    await Player.create2(req, res).then(([rows]) => {
+      res.redirect('/my/allplayer');
+    });
+  } catch (err) {
+    console.log(err);
+  }
+};
+
 
 //Read PlayerById by Kan 0419
 exports.getClanNumber = async (req, res) => {

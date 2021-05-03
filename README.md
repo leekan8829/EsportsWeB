@@ -16,6 +16,3 @@ clan可填 IG or SKT
 
 Update:
 url:http://localhost:3000/my/update
-
-Delete:
-url:http://localhost:3000/my/:id

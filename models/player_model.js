@@ -10,7 +10,7 @@ const Player = class Player {
         this.main = main;
         this.world_champ = world_champ;
         this.photo = photo;
-        this.real_name = this.real_name
+        this.real_name = real_name;
     }
 
     //Read T1  by kan 04/18
@@ -37,6 +37,7 @@ const Player = class Player {
             ]
         );
     }
+
     static create2(req, res) {
         return db.execute(
             'INSERT INTO player (pid, `name`, real_name, belong_clan, `position`, main,world_champ,photo) VALUES (?, ?,?, ?,?,?,?,?)',

@@ -57,11 +57,17 @@
 									<tbody>
 										<% for(let i=0; i<player.length;i++) { %>
 											<tr>
+												<td><%=player[i].PID%></td>
 												<td><%=player[i].ID%></td>
 												<td><%=player[i].real_name%></td>
 												<td><%=player[i].position%></td>
 												<td><%=player[i].main%></td>
-											</tr>
+												<td>
+													<a
+													  class="button delete"
+													  href="/my/delete/<%=player[i].PID%>"
+													  >Delete</a>
+												</td>
 											<%}%>
 									</tbody>
 									<tfoot>

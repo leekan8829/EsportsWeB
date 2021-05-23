@@ -6,6 +6,8 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+const apiRouter = require('./routes/api');
+const api2Router = require('./routes/strapi_');
 
 //我的
 const myRouter = require('./routes/my');
@@ -30,6 +32,10 @@ app.use(express.urlencoded({ extended: true }))
 app.use('/', indexRouter);
 //Kan and Howard
 app.use('/my', myRouter);
+//api
+app.use('/api', apiRouter);
+app.use('/api2', api2Router);
+
 //--------
 app.use('/users', usersRouter);
 
